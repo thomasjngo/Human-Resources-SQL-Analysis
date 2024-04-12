@@ -12,9 +12,9 @@ CREATE TABLE employee_1986_info AS
 SELECT 
 	e.first_name, 
 	e.last_name, 
-	e.hire_date
+	TO_DATE(e.hire_date, 'mm/dd/yyyy')
 FROM employees e
-WHERE hire_date LIKE '%/1986';
+WHERE e.hire_date LIKE '%/1986';
 
 CREATE TABLE employee_managers_info AS
 SELECT 
